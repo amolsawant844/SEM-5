@@ -1,0 +1,84 @@
+header 
+{
+  		
+  		background-color: #002147;
+  		text-align: center;		
+  		color: black;
+      color: white;	
+      height: 140px;
+      padding-top: 5px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 20px;
+      
+
+}
+nav
+{
+		  background-color: white   ;
+  		text-align: center;		
+  		font-size: 20px;
+  		color: white;
+  		padding:15px;
+  		word-spacing: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-right: 10px;
+      
+}
+section
+{
+  padding-top: 10px;
+
+}
+div
+{
+  color: white;
+}
+.leftdiv 
+{ 
+  float: left; 
+  background-color: #002147;
+} 
+.contactdiv 
+{ 
+  float: left; 
+  background-color: white;
+} 
+a:link 
+{
+      color: #002147;
+}
+a:visited 
+{
+      color: #002147;
+}
+
+
+a:hover 
+{
+      color: white;
+      background-color: #002147;
+     
+}
+a:active 
+{
+      color: #002147;
+}
+a
+{
+  text-decoration: none;
+}
+footer 
+{
+      
+      background-color: #002147;
+      text-align: center;   
+      color: white; 
+      height: 80px;
+      padding-top: 5px;
+      padding-bottom: : 5px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 20px;
+      
+
+}
