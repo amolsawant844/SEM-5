@@ -84,7 +84,7 @@ CODE SEGMENT
                 INC DI
                 LOOP UP4
                 
-            LEA DX,MSG3
+            MOV DX,offset MSG3
             MOV AH,09H
             INT 21H
             MOV [RESULT+SI],'$'
