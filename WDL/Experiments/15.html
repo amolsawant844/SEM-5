@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>question 15</title>
+	<script type="text/javascript">
+		
+		function newColor(val)
+		{
+		    document.getElementById(val).style.backgroundColor = "green";
+		}
+
+		function oldColor(val)
+		{
+		    document.getElementById(val).style.backgroundColor = "white";
+		}
+		
+
+
+		function validate()
+		{
+			//user_id
+			var user=document.getElementById("username").value;
+			var user_reg=/^([a-z A-z])([a-z A-Z 0-9 @ \. - # &]{5,12})$/;
+			if(user.length== "")
+			{
+				document.getElementById('valid_userid').innerHTML = "lenght should be greater than 6";
+        		document.getElementById('valid_userid').style.color = "red";	
+			}
+			else if(user_reg.test(user))
+			{
+				document.getElementById('valid_userid').innerHTML = "valid";
+        		document.getElementById('valid_userid').style.color = "red";	
+			}
+			else
+			{
+				document.getElementById('valid_userid').innerHTML = "userid should contain only characters!";
+        		document.getElementById('valid_userid').style.color = "red";	
+			}
+
+			//password
+			var pass_word=document.getElementById("password").value;
+			var pass_reg=/([a-z A-Z 0-9 @ \. # $ !]{7,12})$/;
+			if(pass_word.length == "")
+			{
+				document.getElementById("valid_password").innerHTML="passowrd cannot be empty";
+				document.getElementById("valid_password").style.color="red";
+			}
+			else if(pass_reg.test(pass_word)) 
+			{
+				document.getElementById("valid_password").innerHTML="valid";
+				document.getElementById("valid_password").style.color="red";	
+			}
+			else
+			{
+				document.getElementById("valid_password").innerHTML="Invalid";
+				document.getElementById("valid_password").style.color="red";	
+			}
+
+
+			return false;
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<form action="" onsubmit="return validate()">
+		<label for="username">username:</label>
+		<input type="text" id="username" name="username"  onmouseover="newColor('username')" onmouseout="oldColor('username')">
+		<p id=valid_userid></p>
+		<br><br>
+		<label for="username">password:</label>
+		<input type="text" id="password" name="password" onmouseover="newColor('password')" onmouseout="oldColor('password')" >
+		<p id=valid_password></p>
+		<br><br>
+		<input type="submit" name="submit" value="submit" id="submit">
+
+	</form>
+</body>
+</html>

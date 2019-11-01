@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="9.xsl"?>
+<!DOCTYPE groceries SYSTEM "9.dtd">
+<groceries>
+	<thing>
+		<item>plates</item>
+		<quantity>3</quantity>
+		<price>100</price>
+		<brand>homekitchen</brand>
+	</thing>
+	<thing>
+		<item>glasses</item>
+		<quantity>4</quantity>
+		<price>50</price>
+		<brand>homekitchen</brand>
+	</thing>
+	<thing>
+		<item>sugar</item>
+		<quantity>0.5kg</quantity>
+		<price>100</price>
+		<brand>magic</brand>
+	</thing>
+	<thing>
+		<item>bread</item>
+		<quantity>1</quantity>
+		<price>30</price>
+		<brand>britania</brand>
+	</thing>
+</groceries>

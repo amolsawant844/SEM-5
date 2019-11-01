@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>question 16</title>
+	
+	<script type="text/javascript">
+
+	function colorchange()
+	{
+		 var bgcolor = document.getElementById('bgcolor').value;
+    var fgcolor = document.getElementById('fgcolor').value;
+
+    document.getElementById('body').style.backgroundColor = bgcolor;
+    document.getElementById('body').style.color = fgcolor;
+return false;
+	}
+
+	
+
+	</script>
+	
+</head>
+<body id="body">
+	<form action=" " onsubmit="return colorchange()">
+		<label  for="fgcolor"> txtcolor</label>		
+		<SELECT name="fgcolor" id="fgcolor">
+			<option value="#e5237e">#e5237e</option>
+		    <option value="#36e990">#36e990</option>
+      	    <option value="#2355e5">#2355e5</option>
+		</SELECT>
+		<br><br>
+
+		<label  for="bgcolor"> bgcolor</label>
+		<SELECT name="bgcolor" id="bgcolor">
+			<option value="#e5237e">#e5237e</option>
+		    <option value="#36e990">#36e990</option>
+      	    <option value="#2355e5">#2355e5</option>
+		</SELECT>
+		<br>
+		<br>
+
+		<input type="submit" name="submit" id="submit" value="submit">
+
+	</form>
+
+</body>
+</html>

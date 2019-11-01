@@ -1,0 +1,8 @@
+<! DOCTYPE groceries
+[
+<!ELEMENT thing(item,quantity,price,brand)>
+<!ELEMENT item(#PCDATA)>
+<!ELEMENT quantity(#PCDATA)>
+<!ELEMENT price(#PCDATA)>
+<!ELEMENT brand(#PCDATA)>
+]>

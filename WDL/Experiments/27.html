@@ -1,0 +1,65 @@
+<!--If the dimensions of a box exceed the limit of the box then overflow is used.
+It has 3 values.
+1)hidden: hides content that overflows
+2)scroll: adds a scrollbar to see overflowed content
+3)visible: excess content visible but outside the box.
+
+display has 3 values also:
+1)inline: Elements occupy only as much space as their content.
+2)block: occupy complete horizontal space.
+3) inline-block: elements one after another horizontally
+
+float has 2 values:
+1)left: will move element as far left of the screen as possible
+2)right: will move element as far right of the screen as possible-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Properties</title>
+        <style>
+            textarea{
+                overflow: scroll;
+            }
+            .disp{
+                display: inline-block; /* try changing to "inline" or "block" and see what happens*/ 
+            }
+            table{
+                float: right; /* change to left and see what happens */
+            }
+        </style>
+    </head>
+
+    <body>
+        <textarea name="overflow" id="overflow" rows="5" cols="30">Eden Michael Hazard (French pronunciation: ​[edɛn azaʁ]; born 7 January 1991) is a Belgian professional footballer who plays as a winger or attacking midfielder for Spanish club Real Madrid and captains the Belgium national team. Widely considered as one of the best players in the world, Hazard is known for his creativity, speed, acceleration, dribbling and passing.[4][5][6]
+
+        Hazard is the son of two former footballers and began his career in Belgium playing for local youth clubs. In 2005, he moved to France, where he began his senior career with Ligue 1 club Lille. Hazard spent two years in the club's academy and, at the age of 16, made his professional debut in November 2007. He went on to become an integral part of the Lille team under manager Rudi Garcia, making over 190 appearances. In his first full season as a starter, he won the Ligue 1 Young Player of the Year award, becoming the first non-French player to win the award.[7] In the 2009–10 season, Hazard captured the award again, becoming the first player to win the award twice.[8] He was also named to the Ligue 1 Team of the Year. In the 2010–11 season, he was a part of the Lille team that won the league and cup double and, as a result of his performances, was named the Ligue 1 Player of the Year, the youngest player to win the award.[9] Hazard was also given the Bravo Award by Italian magazine Guerin Sportivo for his performances during this season.[10]></textarea>
+
+        <div class="disp">
+            <p>Lionel Messi is going to win his 6th Ballon d'Or this year</p>
+            <p>Virgil van Dijk will win it</p>
+        </div>
+
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>POTY</th>
+            </tr>
+            <tr>
+                <td>Eden Hazard</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Anthony Martial</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Neymar Jr</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Paul Jogba</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </body>
+</html>

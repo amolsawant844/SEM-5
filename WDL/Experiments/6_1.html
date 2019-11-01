@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Fallout</h1>
+   Guess the number
+   <input type="text" id="number"><br><br>
+   <input type="button" onclick="check()" value="Check"><br><br>
+   
+    <span id="attempts"></span><br>
+    <span id="disp"></span><br>
+    <span id="code"></span><br>
+    
+</body>
+
+<script>
+    var counter=5;
+    
+     //Generating random number and storing it into an array
+      var arr = [];
+        //Fill random number into first index
+        var ran = Math.floor((Math.random() * 6));
+        arr[0]=ran;
+        for( var i=1; i<4;i++)
+        { 
+            var flag=true;
+            
+             while(flag){
+                flag=false;
+                ran = Math.floor((Math.random() * 6)); 
+                 //console.log(ran);
+                 
+                //check if selected random number matches any of the previous array elements 
+                for(var j=0; j<i; j++)
+                {
+                    if(ran == arr[j])
+                        //flag = true;
+                        break;
+                }
+            
+                if (j==i)   //Does not match
+                    arr[i]=ran;
+                else
+                    flag=true;
+            }
+        }
+        
+        console.log(arr);
+        
+    
+    function check(){
+        
+        document.getElementById("attempts").innerHTML= counter + " attempts left";
+        document.getElementById("code").innerHTML= '';   
+        document.getElementById("disp").innerHTML= '';   
+        
+  
+        //Getting Input and storing it into an array
+        
+        var num= document.getElementById("number").value;
+        var input= [];
+        
+        while(num>0)
+        {
+            input.push(num % 10);
+            num = parseInt(num / 10);
+        }
+        
+        input.reverse();
+        
+        console.log(input);
+        
+        
+        //Displaying input
+        for(var i=0; i<input.length; i++)
+            {
+                   document.getElementById("disp").innerHTML+=input[i];   
+            }
+        
+        //Displaying code
+        var flg=true; 
+        for(var i=0; i<input.length; i++)
+            {
+                  if(arr[i] == input[i])
+                      document.getElementById("code").innerHTML+= 'O';   
+                  else{
+                      flg=false;
+                      for(var j=0; j<4;j++)
+                        {
+                            if(input[i] == arr[j])
+                                break;
+                        }
+                      
+                      //No match
+                      if(j == 4)
+                          {
+                              document.getElementById("code").innerHTML+= 'X';   
+                          }
+                      else
+                          document.getElementById("code").innerHTML+= 'V';  
+                        
+                  }
+            }
+        
+        
+        if(flg == true)
+            {
+                document.getElementById("attempts").innerHTML = 'SUCCESS'; 
+            }
+       
+   
+        counter = counter - 1;
+        
+        if(counter == 0)
+            {
+                document.getElementById("attempts").innerHTML = 'FAILED. PLEASE TRY AGAIN'; 
+            }
+        
+        
+    }
+    
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function cal(num)
+		{
+			form.text.value=form.text.value+num;
+		}	
+
+	</script>
+
+
+
+</head>
+
+
+
+<body>
+	<form name="form">
+		<input type="text" name="text" id='text' placeholder="0"><br><br>
+		<input type="button" name="b1" value="1" onClick="cal(b1.value)"></input>
+		<input type="button" name="b2" value="2" onClick="cal(b2.value)"></input>
+		<input type="button" name="b3" value="3" onClick="cal(b3.value)"></input>
+		<input type="button" name="bplus" value="+" onClick="cal(bplus.value)"></input>
+		<br>
+		<input type="button" name="b4" value="4" onClick="cal(b4.value)"></input>
+		<input type="button" name="b5" value="5" onClick="cal(b5.value)"></input>
+		<input type="button" name="b6" value="6" onClick="cal(b6.value)"></input>
+		<input type="button" name="bminus" value="-" onClick="cal(bminus.value)"></input>
+		<br>
+		<input type="button" name="b7" value="7" onClick="cal(b7.value)"></input>
+		<input type="button" name="b8" value="8" onClick="cal(b8.value)"></input>
+		<input type="button" name="b9" value="9" onClick="cal(b9.value)"></input>
+		<input type="button" name="bequal" value="=" onClick="text.value=eval(text.value)"></input>
+		<br>
+		<input type="button" name="bdiv" value="/" onClick="cal(bdiv.value)"></input>
+		<input type="button" name="b0" value="0" onClick="cal(b0.value)"></input>
+		<input type="button" name="bmul" value="*" onClick="cal(bmul.value)"></input>
+	</form>
+</body>
+</html>

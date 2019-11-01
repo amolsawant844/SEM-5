@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>question12</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		/*$(document).ready(function(){
+			('#submit').click(function()
+			{	
+				return validate();
+
+			});
+		});*/
+
+		$(document).ready(function(){
+		    $("#submit").click(function(){
+		        return validate();
+		    });
+		});
+
+		function validate()
+		{
+			var userid=$("#userid").val();
+			var user_reg=/^([a-z A-z])([a-z A-Z 0-9 @ \. - # &]{5,12})$/;
+			if(userid.length== "")
+			{
+				$('#valid_userid').css("color","red");
+				$('#valid_userid').text("userid cannot be blank");
+
+			}
+			else if(user_reg.test(userid))
+			{
+				$('#valid_userid').css("color","green");
+				$('#valid_userid').text("VALID");
+			}
+			else
+			{
+				$('#valid_userid').css("color","red");
+				$('#valid_userid').text("invalid");	
+			}
+
+			
+			return false;
+
+
+
+
+		}
+
+	</script>
+
+
+
+</head>
+<body>
+	<form action="">
+		
+		<label for="userid">User_id:</label>
+		<input type="text" name="userid" id="userid" placeholder="enter user_id">
+		<p id="valid_userid"></p>
+
+			
+
+
+		<input type="submit" class="submit" name="submit" id="submit" value="SUBMIT">
+
+
+</body>
+</html>

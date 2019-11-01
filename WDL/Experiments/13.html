@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function calperc()
+		{
+			var marks1=document.getElementById("marks1").value;
+			var marks2=document.getElementById("marks2").value;
+			var marks3=document.getElementById("marks3").value;
+			totalMarks = Number(marks1)  + Number(marks2) + Number(marks3);
+    		percentage = (totalMarks / 300) * 100;
+    		document.getElementById("perc").innerHTML=percentage;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" name="marks1" id="marks1">
+		<input type="text" name="marks2" id="marks2">
+		<input type="text" name="marks3" id="marks3">
+		<br><br>
+		<input type="button" name="submit" value="percentage" onClick="calperc()">
+		<p id="perc"></p>
+		
+	</form>
+
+</body>
+</html>
