@@ -22,11 +22,11 @@ CODE SEGMENT
     MOV AX,EXTRA
     MOV ES,AX
     
-    LEA DX,MSG1
+    MOV DX,offset MSG1
     MOV AH,09H
     INT 21H
     
-    MOV BX,000
+    MOV BX,00H
     
     UP1:    ;taking input character by character
         
@@ -41,13 +41,13 @@ CODE SEGMENT
     DOWN1:
 
         
-        LEA DX,MSG2
+        MOV DX,offset MSG2
         MOV AH,09H
         INT 21H
     
         MOV CX,BX ;storing length of string1
     
-        MOV BX,00 ;reinitializing bx
+        MOV BX,00H ;reinitializing bx
         
         UP2:     ;taking input character by character
         
